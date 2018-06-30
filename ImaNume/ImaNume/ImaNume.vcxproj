@@ -116,7 +116,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Color.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="Object3D.cpp" />
+    <ClCompile Include="Ray.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="Transform.cpp" />
+    <ClCompile Include="Vector3.cpp" />
     <ClCompile Include="_main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="Object3D.h" />
+    <ClInclude Include="Ray.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Transform.h" />
+    <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
