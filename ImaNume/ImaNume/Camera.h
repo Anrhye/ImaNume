@@ -1,15 +1,23 @@
 #pragma once
 #include "Color.h"
+#include "Object3D.h"
 
 namespace CoreModule
 {
-	class Camera
+	class Camera : public Object3D
 	{
 	private:
-		int near, far, fov;
+		double nearPlan, farPlan;
 		Color* backgroundColor;
 	public:
 		Camera();
+		Camera(Maths::Vector3* pos);
 		~Camera() { };
+
+		double getNear();
+		double getFar();
+
+		void setNear(double nearPlan);
+		void setFar(double farPlan);
 	};
 }

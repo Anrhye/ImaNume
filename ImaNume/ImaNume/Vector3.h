@@ -1,9 +1,6 @@
 #pragma once
 #include <math.h>
 
-#ifndef __VECTOR3__
-#define __VECTOR3__
-
 namespace Maths
 {
 	class Vector3
@@ -15,8 +12,10 @@ namespace Maths
 		Vector3(double x, double y, double z);
 		~Vector3() { };
 
-		double length();
-		Vector3 normalized();
+		static double length(Vector3 vec);
+		static Vector3 normalize(Vector3 vec);
+		static double scalaire(Vector3 u, Vector3 v);
+		static Maths::Vector3 reflect(Vector3 u, Vector3 v);
 
 		double getX();
 		double getY();
@@ -32,5 +31,3 @@ namespace Maths
 		Vector3 operator/(double);
 	};
 }
-
-#endif

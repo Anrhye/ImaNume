@@ -4,7 +4,8 @@ CoreModule::Color::Color() { }
 
 CoreModule::Color::Color(Maths::Vector3* rgb) {	this->rgb = rgb; }
 
-CoreModule::Color::Color(Maths::Vector3* rgb, double alpha) : Color(rgb) { this->alpha = alpha; }
+CoreModule::Color::Color(Maths::Vector3* rgb, double alpha)
+	: Color(rgb) { this->alpha = alpha; }
 
 double CoreModule::Color::getR() {	return this->rgb->getX();	}
 

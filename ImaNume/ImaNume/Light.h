@@ -1,5 +1,7 @@
 #pragma once
+#include <vector>
 #include "Color.h"
+#include "Sphere.h"
 
 namespace CoreModule
 {
@@ -10,14 +12,16 @@ namespace CoreModule
 		point
 	};
 
-	class Light
+	class Light : public Object3D
 	{
 	private:
 		int intensity;
-		Color* color;
 		LightType* lightType;
 	public:
 		Light();
+		Light(Maths::Vector3* pos);
 		~Light() { };
+
+		bool direct(Maths::Vector3 inter, std::vector<Sphere*> spheres);
 	};
 }
